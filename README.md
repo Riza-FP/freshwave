@@ -1,4 +1,4 @@
-# Be Car Wash - Booking System
+# FreshWave CarWash - Booking System
 
 A sleek, responsive, and dynamic web application for booking car wash appointments. Built with **Laravel** and **Tailwind CSS**, this project features a modern glassmorphism design for the guest booking flow and a secure admin dashboard to manage reservations.
 
@@ -27,8 +27,8 @@ A sleek, responsive, and dynamic web application for booking car wash appointmen
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/service-booking-system.git
-    cd service-booking-system
+    git clone https://github.com/yourusername/freshwave.git
+    cd freshwave
     ```
 
 2.  **Install PHP dependencies:**
