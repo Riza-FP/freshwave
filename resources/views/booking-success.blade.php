@@ -70,7 +70,7 @@
                         <span class="text-sm font-medium text-slate-500">Name</span>
                         <span class="text-sm font-bold text-slate-800">{{ $booking->name }}</span>
                     </div>
-                    <!-- Optional: Hide phone number or show conditionally based on preference -->
+
                     <div class="flex justify-between items-center pb-3 border-b border-slate-200/70">
                         <span class="text-sm font-medium text-slate-500">Phone</span>
                         <span class="text-sm font-bold text-slate-800">{{ $booking->phone_number }}</span>

@@ -40,5 +40,10 @@ Route::post('/logout', function (\Illuminate\Http\Request $request) {
 // Admin Protected Routes
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+    Route::get('/bookings/create', [AdminController::class, 'create'])->name('bookings.create');
+    Route::post('/bookings', [AdminController::class, 'store'])->name('bookings.store');
+    Route::get('/bookings/{booking}/edit', [AdminController::class, 'edit'])->name('bookings.edit');
+    Route::put('/bookings/{booking}', [AdminController::class, 'update'])->name('bookings.update');
+    Route::delete('/bookings/{booking}', [AdminController::class, 'destroy'])->name('bookings.destroy');
     Route::patch('/bookings/{booking}/status', [AdminController::class, 'updateStatus'])->name('bookings.update-status');
 });

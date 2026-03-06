@@ -192,6 +192,14 @@
                                     @enderror
                                 </div>
                                 <div>
+                                    <input type="email" name="email" placeholder="Email Address" required
+                                        value="{{ old('email') }}"
+                                        class="w-full px-4 py-3.5 rounded-xl border border-white/10 bg-white/10 text-white font-medium placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-brandAccent focus:border-brandAccent transition-all shadow-inner">
+                                    @error('email') <span
+                                        class="text-xs text-red-400 mt-1.5 block font-medium">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                                <div>
                                     <input type="tel" name="phone_number" placeholder="WhatsApp / Phone Number" required
                                         value="{{ old('phone_number') }}"
                                         class="w-full px-4 py-3.5 rounded-xl border border-white/10 bg-white/10 text-white font-medium placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-brandAccent focus:border-brandAccent transition-all shadow-inner">

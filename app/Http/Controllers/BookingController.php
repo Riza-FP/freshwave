@@ -65,6 +65,7 @@ class BookingController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
             'phone_number' => 'required|string|max:20',
             'booking_date' => 'required|date|after_or_equal:today',
             'booking_time' => 'required|date_format:H:i:s',
@@ -87,11 +88,18 @@ class BookingController extends Controller
 
         $booking = Booking::create([
             'name' => $request->name,
+            'email' => $request->email,
             'phone_number' => $request->phone_number,
             'booking_date' => $request->booking_date,
             'booking_time' => $request->booking_time,
             'status' => 'pending',
         ]);
+
+        try {
+            \Illuminate\Support\Facades\Mail::to($booking->email)->send(new \App\Mail\BookingConfirmed($booking));
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('Failed to send booking confirmation email: ' . $e->getMessage());
+        }
 
         return redirect()->route('booking.success')->with('booking_id', $booking->id);
     }
