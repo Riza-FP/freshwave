@@ -5,9 +5,35 @@ A sleek, responsive, and dynamic web application for booking car wash appointmen
 ## Features
 
 *   **Modern Guest Booking Interface:** A beautiful, animated landing page featuring a dark theme and mint green accents.
-*   **Dynamic Time Slots:** Real-time checking of available time slots to prevent double-booking.
+*   **Dynamic Time Slots:** Real-time checking of available time slots via AJAX to prevent double-booking seamlessly.
+*   **Wait-Free Confirmation:** Automated email notifications sent instantly upon booking via Laravel Mailables.
 *   **Secure Admin Dashboard:** A protected area for administrators to view, confirm, complete, or cancel bookings.
-*   **Responsive Design:** Fully optimized for mobile, tablet, and desktop viewing.
+*   **Single-Page CRUD Operations:** Manage bookings incredibly fast using pure PHP and CSS Modals without page redirects.
+*   **Analytics Graph:** Visualized daily booking data using Chart.js.
+*   **Responsive Design:** Fully optimized with Tailwind CSS for mobile, tablet, and desktop viewing.
+
+## Screenshots
+
+<div align="center">
+  <img src="screenshots/Landing%20Page.png" alt="FreshWave Landing Page" width="800">
+  <br>
+  <em>The modern, dynamic booking interface for guests</em>
+</div>
+<br>
+
+<div align="center">
+  <img src="screenshots/Booking%20Successful.png" alt="Booking Success Page" width="800">
+  <br>
+  <em>The confirmation page with the continuous brand theme</em>
+</div>
+<br>
+
+<div align="center">
+  <img src="screenshots/Admin%20Dashboard.png" alt="Admin Dashboard" width="800">
+  <br>
+  <em>The secure single-page Admin Dashboard with Chart.js analytics and Modals</em>
+</div>
+<br>
 
 ## Technologies Used
 
